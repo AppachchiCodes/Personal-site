@@ -237,7 +237,8 @@ footer {
 @media (max-width: 800px) {
   .navbar {
     padding: 0.5rem 1rem;     
-    flex-wrap: wrap;         
+    flex-wrap: nowrap;
+    justify-content: space-between;         
     gap: 0.25rem;
   }
 
@@ -252,7 +253,7 @@ footer {
 
  
   .navbar-brand {
-    font-size: 0.95rem;
+    font-size: 0.75rem;
   }
 
   
@@ -260,9 +261,9 @@ footer {
     order: 2;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 12px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 0.25rem 0;
     margin: 0;
   }
@@ -271,9 +272,9 @@ footer {
   .social-icons {
     order: 3;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 10px;
-    padding: 0.25rem 0 0.5rem;
+    padding: 0;
   }
 
   .social-icons a { padding: 6px; }
@@ -282,7 +283,7 @@ footer {
 
 
 @media (max-width: 420px) {
-  .nav-links { gap: 8px; font-size: 0.95rem; }
+  .nav-links { gap: 8px; font-size: 0.75rem; }
   .navbar-left { gap: 0.6rem; }
 }
 
