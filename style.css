@@ -1,5 +1,5 @@
 :root {
-  /* Dark theme variables (existing, do NOT change) */
+  /* Dark theme variables  */
   --navy: #0a192f;
   --light-navy: #112240;
   --lightest-navy: #233554;
@@ -230,4 +230,77 @@ footer {
   width: 20px;
   height: 20px;
   fill: currentColor;
+}
+
+
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0.5rem 1rem;     
+    flex-wrap: wrap;         
+    gap: 0.25rem;
+  }
+
+ 
+  .navbar-left {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    order: 1;
+    padding: 0.2rem 0;
+  }
+
+ 
+  .navbar-brand {
+    font-size: 0.95rem;
+  }
+
+  
+  .nav-links {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 0.25rem 0;
+    margin: 0;
+  }
+
+  
+  .social-icons {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.25rem 0 0.5rem;
+  }
+
+  .social-icons a { padding: 6px; }
+  .social-svg { width: 20px; height: 20px; }
+}
+
+
+@media (max-width: 420px) {
+  .nav-links { gap: 8px; font-size: 0.95rem; }
+  .navbar-left { gap: 0.6rem; }
+}
+
+
+#treeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px; 
+  height: 400px;    
+}
+
+
+#treeContainer canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
