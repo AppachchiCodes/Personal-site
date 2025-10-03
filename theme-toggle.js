@@ -27,16 +27,16 @@ function applyTheme(isDark) {
   if (!isDark) {
     // Sun Theme
     root.classList.add('sun-theme');
+    toggleBg.setAttribute('fill', '#0a192f');
+    sunRays.style.opacity = '0';
+    sunRays.style.transform = 'rotate(45deg)';
+    moon.style.opacity = '1';
+  } else {
+    // Dark Theme
+    root.classList.remove('sun-theme');
     toggleBg.setAttribute('fill', '#FFD95D');
     sunRays.style.opacity = '1';
     sunRays.style.transform = 'rotate(0deg)';
     moon.style.opacity = '0';
-  } else {
-    // Dark Theme
-    root.classList.remove('sun-theme');
-    toggleBg.setAttribute('fill', '#64ffda');
-    sunRays.style.opacity = '0';
-    sunRays.style.transform = 'rotate(45deg)';
-    moon.style.opacity = '1';
   }
 }
