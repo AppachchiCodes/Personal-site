@@ -5,7 +5,7 @@ const sunRays = document.getElementById('sunRays');
 const moon = document.getElementById('moon');
 
 // Check for saved theme preference or default to dark
-let darkMode = localStorage.getItem('darkMode') !== 'false';
+let darkMode = localStorage.getItem('darkMode') === null ? true : localStorage.getItem('darkMode') === 'true';
 
 // Apply theme on load
 applyTheme(darkMode);
