@@ -27,7 +27,7 @@
   --light-slate: #576238;
   --lightest-slate: #F0EADC;
   --white: #F0EADC;
-  --green: #FFD95D;
+  --green: #e9a419;
   --green-bright: #FFD95D;
   --navbar-bg: #FFF7DD;
   --subtitle-color: #333333;
@@ -106,7 +106,7 @@ ul {
 
 .skills span {
   background-color: var(--light-navy);
-  color: var(--green);
+  color: var(--green-bright);
   padding: 5px 12px;
   border-radius: 5px;
   font-size: 0.9em;
