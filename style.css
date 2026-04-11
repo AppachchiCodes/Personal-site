@@ -1,5 +1,5 @@
 :root {
-  /* Dark theme (default) */
+  
   --navy: #0a192f;
   --light-navy: #112240;
   --lightest-navy: #233554;
@@ -18,7 +18,6 @@
   --footer-text-color: #a8b2d1;
 }
 
-/* Sun theme override */
 :root.sun-theme {
   --navy: #f0eadcea;
   --light-navy: #576238;
@@ -71,6 +70,7 @@ section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: 0 auto;
+  scroll-margin-top: 70px;
 }
 
 h2 {
@@ -113,22 +113,25 @@ ul {
   transition: background-color 0.3s ease;
 }
 
-header { 
-  background-color: var(--light-navy); 
-  padding: 50px 20px; 
+header {
+  background-color: var(--light-navy);
+  padding: 60px 20px 50px;
   text-align: center;
   transition: background-color 0.3s ease;
 }
 
-header h1 { 
-  font-size: 3em; 
-  color: var(--white); 
-  margin-bottom: 8px; 
+header h1 {
+  font-size: 3.5em;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
 }
 
-header p { 
-  margin-bottom: 8px; 
-  color: var(--subtitle-color); 
+header p {
+  margin-bottom: 8px;
+  color: var(--subtitle-color);
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
 }
 
 #treeContainer { 
@@ -153,18 +156,21 @@ canvas {
   header h1 { font-size: 2em; } 
 }
 
-/* ABOUT ME */
-.about-me ul { 
-  list-style: none; 
-  padding-left: 20px; 
-  position: relative; 
+.about-me ul {
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 200px));
+  gap: 4px 0;
+  margin-top: 8px;
 }
 
-.about-me ul li { 
-  position: relative; 
-  margin-bottom: 8px; 
-  padding-left: 25px; 
-  color: var(--light-slate); 
+.about-me ul li {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  color: var(--light-slate);
 }
 
 .about-me ul li::before { 
@@ -182,9 +188,15 @@ canvas {
   font-weight: 500; 
 }
 
-/* EXPERIENCE SECTION */
 .experience-item {
   margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--lightest-navy);
+  transition: border-color 0.3s ease;
+}
+
+.experience-item:hover {
+  border-left-color: var(--green);
 }
 
 .experience-item h5 {
@@ -218,7 +230,6 @@ canvas {
   font-weight: bold;
 }
 
-/* EDUCATION SECTION */
 .education-item {
   margin-bottom: 1.5rem;
 }
@@ -232,14 +243,6 @@ canvas {
   color: var(--slate);
   font-size: 0.95rem;
   margin: 0.25rem 0;
-}
-
-/* PROJECTS SECTION */
-#projects { 
-  margin: auto; 
-  padding-top: 80px; 
-  max-width: 1000px; 
-  min-height: 50vh; 
 }
 
 .projects-grid { 
@@ -270,7 +273,6 @@ canvas {
   transform: translateY(-5px); 
   background-color: var(--card-hover-bg); 
 }; 
-
 
 .fade-in-section { 
   opacity: 0; 
@@ -358,7 +360,6 @@ canvas {
   }
 }
 
-/* FOOTER */
 footer {
   background-color: var(--light-navy);
   color: var(--lightest-slate);
@@ -389,7 +390,6 @@ footer {
   color: var(--footer-text-color); 
 }
 
-/* THEME TOGGLE */
 .theme-toggle { 
   cursor: pointer; 
   width: 60px; 
@@ -413,7 +413,6 @@ footer {
   transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
-/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -456,7 +455,6 @@ footer {
   color: var(--green-bright);
 }
 
-/* SOCIAL ICONS */
 .social-icons {
   display: flex;
   align-items: center;
@@ -479,7 +477,6 @@ footer {
   fill: currentColor;
 }
 
-/* MOBILE NAVBAR */
 @media (max-width: 800px) {
   .navbar {
     padding: 0.5rem 1rem;     
@@ -528,8 +525,13 @@ footer {
   .navbar-left { gap: 0.6rem; }
 }
 
-/* PET PROJECTS CAROUSEL SECTION */
-#pet-projects {
+#projects {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#other-projects {
   padding: 20px 20px 60px;
   max-width: 1000px;
   margin: 0 auto;
@@ -569,7 +571,7 @@ footer {
 .project-image-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; 
   overflow: hidden;
   border-radius: 12px;
   background-color: var(--light-navy);
@@ -681,7 +683,6 @@ footer {
   transform: scale(1.15);
 }
 
-/* Carousel Controls */
 .carousel-control {
   position: absolute;
   top: 50%;
@@ -719,7 +720,6 @@ footer {
   right: 20px;
 }
 
-/* Carousel Indicators */
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -751,9 +751,8 @@ footer {
   border-radius: 6px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  #pet-projects {
+  #projects {
     padding: 60px 15px 40px;
   }
 
@@ -809,5 +808,15 @@ footer {
   .project-icon svg {
     width: 18px;
     height: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-me ul {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 2.2em;
   }
 }
