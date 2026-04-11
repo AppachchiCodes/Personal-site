@@ -245,6 +245,53 @@ canvas {
   margin: 0.25rem 0;
 }
 
+.wip-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin: 2rem 0 0.75rem 1.25rem;
+}
+
+.wip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--green);
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.wip-item {
+  opacity: 0.65;
+  border-left-color: var(--lightest-navy);
+}
+
+.wip-item h5 {
+  color: var(--light-slate);
+}
+
+.wip-item:hover {
+  opacity: 1;
+  border-left-color: var(--green);
+}
+
+.wip-tag {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--slate);
+  font-style: italic;
+}
+
 .projects-grid { 
   display: grid; 
   grid-template-columns: repeat(3, minmax(250px, 1fr)); 
