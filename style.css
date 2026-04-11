@@ -161,7 +161,7 @@ canvas {
   padding-left: 20px;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(120px, 200px));
+  grid-template-columns: repeat(3, minmax(140px, 200px));
   gap: 4px 0;
   margin-top: 8px;
 }
@@ -813,7 +813,7 @@ footer {
 
 @media (max-width: 500px) {
   .about-me ul {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
   }
 
   header h1 {
